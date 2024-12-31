@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="root">
+        <header class="header">
+            <h1>Film Fuse</h1>
+                
+                <h3>Your next favourite film , just a click away.</h3>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search for movies...">
+                <button id="searchButton">Search</button>
+                
+            </div>
+            <div class="filters">
+                <select id="genreSelect">
+                    <option value="">All Genres</option>
+                </select>
+                <div class="sort">
+                    <select id="sortSelect">
+                        <option value="popularity.desc">Sort by Popularity (Desc)</option>
+                        <option value="popularity.asc">Sort by Popularity (Asc)</option>
+                        <option value="release_date.desc">Sort by Release Date (Desc)</option>
+                        <option value="release_date.asc">Sort by Release Date (Asc)</option>
+                        <option value="vote_average.desc">Sort by Rating (Desc)</option>
+                        <option value="vote_average.asc">Sort by Rating (Asc)</option>
+                    </select>
+                </div>
+            </div>
+      
+    </header>
+        <main>
+            <h2>Recommended Movies</h2>
+            <div class="loading" id="loading" style="display: none;">Loading...</div>
+            <div class="movie-list" id="movieList"></div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
